@@ -1,0 +1,123 @@
+// Core scripts for Design Style 89.
+// @author     Church Plant Media
+// @package    89/js
+// @copyright  2016 Church Plant Media
+
+$(function() {
+
+    // init CPM modules
+    $.getScript("https://cpmtls.com/modules/global.js");
+    $.getScript("https://cpmtls.com/modules/blogs.js");
+    $.getScript("https://cpmtls.com/modules/events.js");
+    $.getScript("https://cpmtls.com/modules/sermons.js");
+
+    // init FastClick
+    $(function() {
+        FastClick.attach(document.body);
+    });
+
+    // banner titles
+    swapTitle();
+    function swapTitle() {
+      current = $('header #nav > li.current > a').first();
+      if (current.length) {
+        $('#subpage .banner-title h1').text(current.text());
+        $('#subpage .banner-title h1').fadeIn(2000);
+      } else {
+        var URL = document.URL.split('/');
+        if (URL[4] === 'page') {
+          var txt = URL[3] + " Page " + URL[5];
+          $('#subpage .banner-title h1').text(txt);
+          $('#subpage .banner-title h1').fadeIn(400);
+        }
+      }
+    }
+
+    // toggle mobile nav
+    $('body').on('click', '.mobile-menu-button, .menu-close-button', function(){
+        $('.mobile-nav').fadeToggle(100);
+    });
+
+    // add dropdown arrow class
+    $('header #nav li ul li:has(ul)').addClass('children-arrow');
+
+    // toggle search
+    $('#social .search').on('click', showSearch);
+    function showSearch() {
+        $('.search-box').toggle();
+        $('.header-info #social a').toggle();
+        $('.header-info #social .search').show(0);
+        $('.search-box .search-input').focus();
+    }
+
+    // hide search box on click elsewhere
+    $(document).mouseup(function(e) {
+        var container = $(".search-box, .search-box input, #social .search");
+        if (!container.is(e.target)) {
+            container.each(function() {
+                $('.search-box').hide(0);
+                $('.header-info #social a').show(0);
+            });
+        }
+    });
+
+    // conference page tabset
+    $('.conference ul.tabs').each(function() {
+
+      var current, view, anchor = $(this).find('a');
+      current = $(anchor.filter('[href="'+location.hash+'"]')[0] || anchor[0]);
+      current.addClass('current');
+      view = $(current[0].hash);
+
+      anchor.not(current).each(function () {
+        $(this.hash).hide();
+      });
+
+      $(this).on('click', 'a', function(e){
+        $('.conference ul.tabs a').removeClass('current');
+        view.hide();
+
+        current = $(this);
+        view = $(this.hash);
+
+        current.addClass('current');
+        view.show();
+
+        history.pushState(null, null, $(this.hash).selector);
+        e.preventDefault();
+      });
+
+      $('.speaker-widget').on('click', 'a', function(e){
+        $('.conference ul.tabs a').removeClass('current');
+        view.hide();
+
+        current = $('speakers');
+        view = $('#speakers');
+
+        $('.conference ul.tabs li:nth-child(2) a').addClass('current');
+        view.show();
+
+        history.pushState(null, null, "#speakers");
+        e.preventDefault();
+      });
+
+      $('.schedule-widget').on('click', 'a', function(e){
+        $('.conference ul.tabs a').removeClass('current');
+        view.hide();
+
+        current = $('schedule');
+        view = $('#schedule');
+
+        $('.conference ul.tabs li:nth-child(3) a').addClass('current');
+        view.show();
+
+        history.pushState(null, null, "#schedule");
+        e.preventDefault();
+      });
+    });
+
+    // fix embedded image alignment
+    $('.cms-output img.left-align').parent().css('padding-bottom', 0);
+    $('.cms-output img.right-align').parent().css('padding-bottom', 0);
+
+});

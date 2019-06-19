@@ -1,0 +1,240 @@
+div#float-l {
+    float: left;
+    width: 49%;
+}
+
+div#float-r {
+    float: right;
+    width: 49%;
+}
+
+.cms-output p.column-wrap,
+.wrapper p.column-wrap {
+	display:none;
+}
+
+.quicklinks.contributors {
+	display:none;
+}
+
+#subpage #banner .banner-title {
+    display: none;
+}
+
+#content #dt .tabset {
+    display: none;
+}
+
+#content #dt .media-top {
+    margin-bottom: -90px;
+}
+
+#content #dt .sidebar-wrap.first-wrap {
+    display: none;
+}
+
+#content #dt .sidebar-wrap.last-wrap {
+    display: none;
+}
+
+@media (max-width: 865px) {
+.style-wrap-arrow {
+    margin-top: 8px;
+}
+}
+
+.blog-filter {
+    display: none;
+}
+
+@media (max-width: 865px) {
+.style-wrap-arrow {
+    display: none;
+}
+}
+
+@media (max-width: 865px) {
+#content #dt .featured-posts {
+    padding-top: 100px;
+}
+}
+
+@media (max-width: 865px) {
+#content #dt .all-posts {
+    padding-top: 8px;
+}
+}
+
+@media (max-width: 1200px) {
+.style-wrap-arrow {
+    display: none;
+}
+}
+
+@media (max-width: 1200px) {
+.media-top {
+    border-bottom: 0px solid #c3c3c1;
+}
+}
+
+#sidebar-bio {
+    font-family: "brandon-grotesque", "brandon-grotesque-1", "brandon-grotesque-2", sans-serif;
+    font-size: 15px;
+    line-height: 23px;
+    color: #2a323f;
+    font-weight: 400;
+    padding-bottom: 14px;
+}
+
+#sidebar-bio a{
+color: #ad8151;
+font-weight: 700;
+}
+
+#sidebar-bio img {
+    height: auto;
+    width: 77px;
+    margin-bottom: auto;
+    margin-left: -6px;
+    margin-right: 10px;
+}
+
+
+#sidebar-bio h4 {
+    height: 14px;
+    color: #2a323f;
+    font-family: "brandon-grotesque", "brandon-grotesque-1", "brandon-grotesque-2", sans-serif;
+    font-size: 17px;
+    font-weight: 900;
+    line-height: 42px;
+    text-transform: uppercase;
+    max-width: 100%;
+    width: 100%;
+    margin-top: -13px;
+}
+
+#float-l h5 a{
+    display: block;
+    position: relative;
+    color: #6982ab;
+    font-family: "brandon-grotesque", "brandon-grotesque-1", "brandon-grotesque-2", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 32px;
+}
+
+#float-r h5 a{
+    display: block;
+    position: relative;
+    color: #6982ab;
+    font-family: "brandon-grotesque", "brandon-grotesque-1", "brandon-grotesque-2", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 32px;
+}
+
+#content #dt .sidebar-wrap #float-l {
+    display: block;
+    position: relative;
+    float: left;
+    width: 49%;
+}
+
+#content #dt .sidebar-wrap #float-r {
+    display: block;
+    position: relative;
+    float: right;
+    width: 49%;
+}
+
+#content #dt .sidebar-wrap #float-l h5,
+#content #dt .sidebar-wrap #float-r h5{
+    padding: 0;
+    line-height: 0;
+    font-size: 15px;
+    text-transform: initial;
+}
+
+.quicklinks.newsletter h4 {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+/* https://churchplantmedia.atlassian.net/browse/QTFD-194
+-------------------------------------------------------*/
+#content #dt .podcast-btn {
+    display: none;
+}
+
+#content #dt .sidebar-wrap {
+  border-bottom: none;
+}
+
+#dt .sidebar-wrap.blog-right .post-share .fb-like {
+    position: absolute !important;
+    top: 26px !important;
+    left: 54px !important;
+}
+
+#dt .sidebar-wrap.blog-right .post-share .twitter-share-button {
+    position: absolute !important;
+    top: 26px !important;
+    left: 124px !important;
+}
+
+.blog-index #dt .sidebar-wrap.blog-right .post-share .twitter-share-button {
+    left: 132px !important;
+}
+
+#dt .sidebar-wrap.blog-right .more-posts {
+    display: none;
+}
+
+#sidebar-bio {
+    padding-top: 14px !important;
+}
+
+#subpage #content .cms-output p a:hover {
+    text-decoration: none;
+}
+
+.cms-output p a {
+    text-decoration: underline;
+}
+
+/* ld-342 */
+/* #home .news-summary p {
+    display: none;
+    font-family: "Charis SIL", serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    position: relative;
+    top: -8px;
+    color: #53616b;
+}
+
+#home .news-summary p.column-wrap {
+    display: block;
+} */
+
+.news-summary iframe {
+    width: 100%;
+}
+
+.qls div a {
+    color: #ad8151;
+    font-family: "brandon-grotesque", "brandon-grotesque-1", "brandon-grotesque-2", sans-serif;
+    font-size: 15px;
+    line-height: 23px;
+    padding-bottom: 14px;
+    font-weight: 700;
+}
+
+.comment .comment-content {
+    font-size: 14px;
+    padding-top: 12px;
+    line-height: 22px;
+    font-family: "Charis SIL", serif;
+}
